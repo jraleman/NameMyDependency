@@ -7,6 +7,6 @@
   "author": "jraleman <jraleman@bendiburg.com>",
   "license": "MIT",
   "dependencies": {
-    "validate-npm-package-name": "^3.0.0"
+    "is-valid-package-name": "^1.0.0"
   }
 }

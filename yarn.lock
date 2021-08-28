@@ -2,14 +2,29 @@
 # yarn lockfile v1
 
 
-builtins@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
-  integrity sha1-y5T662HIaWRR2zZTThQi+U8K7og=
-
-validate-npm-package-name@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-3.0.0.tgz#5fa912d81eb7d0c74afc140de7317f0ca7df437e"
-  integrity sha1-X6kS2B630MdK/BQN5zF/DKffQ34=
+"@miyauci/is-valid@1.0.0-beta.9":
+  version "1.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@miyauci/is-valid/-/is-valid-1.0.0-beta.9.tgz#81974d56eed8944a61246f2fee7539ed6055d160"
+  integrity sha512-J0sNliONAnldZnk1TpX0R6zEv7u5IumItAktaty/XQ3i+fsUcWw7bNAKgtiS54HVB833erRnQ7GmQNfq8Rkd4Q==
   dependencies:
-    builtins "^1.0.3"
+    fonction "^1.8.0-beta.6"
+
+curry-rice@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/curry-rice/-/curry-rice-1.0.0.tgz#ff5daf251141a54931988458ced7c39931fa5b96"
+  integrity sha512-rpXOEtPurOBZGieMQf/wG7YW+zi2N7EWrkaVBFLZYCUyG2LiLLuNup9yIdasuiCmo+O/LTwPDiijotmSlRLYXA==
+
+fonction@^1.8.0-beta.6, fonction@^1.8.1:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.9.0.tgz#3866621a5d6381c44e559db4a04d043253eecb96"
+  integrity sha512-kFt8/QbJdrVukhppuOwuSmNsAxfkl2LH9OygARP7pUfb7aJzJUoF7triyww6YjY40F/m9x+qoJX9zhEk2c6gjA==
+  dependencies:
+    curry-rice "^1.0.0"
+
+is-valid-package-name@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-valid-package-name/-/is-valid-package-name-1.0.0.tgz#fdd5a24abad2f61bd9e14d6844cfbc37e02cfe65"
+  integrity sha512-swikZQ5Q0zws/A1wkbpUZLx0undHTNa8UMEhWzAmyVxwwvjXFRa+TnseO7sa/b5CnUlky5/12l6d09ArUI6Aog==
+  dependencies:
+    "@miyauci/is-valid" "1.0.0-beta.9"
+    fonction "^1.8.1"
