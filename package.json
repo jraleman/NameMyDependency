@@ -1,0 +1,9 @@
+{
+  "name": "ismydepnamegood.com",
+  "version": "1.0.0",
+  "description": "Checks if you have named your dependency correctly. Includes: npm",
+  "main": "index.js",
+  "repository": "git@github.com:jraleman/ismydepnamegood.com.git",
+  "author": "jraleman <jraleman@bendiburg.com>",
+  "license": "MIT"
+}
