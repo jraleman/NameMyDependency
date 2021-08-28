@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:jraleman/ismydepnamegood.com.git",
   "author": "jraleman <jraleman@bendiburg.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "validate-npm-package-name": "^3.0.0"
+  }
 }
