@@ -1,6 +1,7 @@
 const { validateNpm } = require("is-valid-package-name");
 
-const dependencyName = '';
-const nameStatus = validateNpm(dependencyName);
+const validatePackageName = (name) => validateNpm(name);
 
-console.log('nameStatus: ', nameStatus);
+const mockInput = 'invalid-name1!!';
+
+console.log('validatePackageName: ', validatePackageName(mockInput));
