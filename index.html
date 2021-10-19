@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IsMyDepNameGood?.com</title>
+    <title>NameMyDependency.com</title>
 </head>
 <body>
     <form onsubmit="onSubmit(event)">
         <input id="name-input" placeholder="Enter name of package" />
         <button>Validate Name</button>
     </form>
-    <p>{name} is valid, but first check if it is registered :)</p>
+    <p id="message">
+        <span id="value-name">{name}</span>
+        is valid name! Let's see if it is registered :)
+    </p>
 <script>
-    const onSubmit = (event) => {
-        try {
-            const inputId = 'name-input';
-            const element = document.getElementById(inputId);
+    const port = 3000;
+    const baseUrl = `http://localhost:${port}`;
+    const verifyEndpoint = '/verify_input';
+    const inputId = 'name-input';
 
+    const onSubmit = async (event) => {
+        try {
+            const { value } = document.getElementById(inputId);
             event.preventDefault();
-            console.log('element: ', element);
-            // TODO: get value of tet input and send it back to server to validate if the thing is valid or not...
-            // maybe we can take a look at server side rendering with node, so we can do everything in there?
+            const req = {
+                method: 'POST',
+                body: JSON.stringify({ value }),
+                headers: { 'Content-Type': 'application/json' }
+            };
+            const url = `${baseUrl}${verifyEndpoint}`;
+            const res = await fetch(url, req);
+            const isValid = await res.json();
+            console.log({ isValid });
         } catch (e) {
             throw new Error(e.message);
         }
