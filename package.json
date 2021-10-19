@@ -7,6 +7,7 @@
   "author": "jraleman <jraleman@bendiburg.com>",
   "license": "MIT",
   "dependencies": {
+    "all-package-names": "^2.0.172",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "is-valid-package-name": "^1.0.0"
