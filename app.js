@@ -19,7 +19,7 @@ app.post('/verify_input', async (req, res) => {
             res.status(200).send(false);
         }
         const { packageNames } = await loadPackages();
-        const isValid = packageNames.includes(value);
+        const isValid = !packageNames.includes(value);
         console.log({ packageNames, isValid });
         res.status(200).send(isValid);
     } catch (error) {

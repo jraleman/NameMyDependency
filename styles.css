@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+.container {
+    border-width: 1rem;
+    border-style: solid;
+    border-color: seagreen;
+}

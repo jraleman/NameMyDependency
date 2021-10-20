@@ -1,2 +1,3 @@
-# ismydepnamegood.com
-Checks if you have named your dependency correctly. Includes: npm
+# NameMyDependency
+
+> If you need to name your dependency, look no further!
