@@ -8,16 +8,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>NameMyDependency</h1>
-        <form onsubmit="onSubmit(event)">
-            <input id="name-input" placeholder="Enter name of package" />
-            <button>Validate Name</button>
-        </form>
-        <p id="message">
-            <span id="value-name">{name}</span>
-            is valid name! Let's see if it is registered :)
-        </p>
+    <div class="wrapper">
+        <div class="container">
+            <h1>NameMyDependency</h1>
+            <form class="form" onsubmit="onSubmit(event)">
+                <input type="text" id="name-input" placeholder="Enter name of package" />
+                <button type="submit">Check 🕵️‍♂️</button>
+            </form>
+            <p id="message">
+                <span id="value-name">{name}</span>
+                is valid name! Let's see if it is registered :)
+            </p>
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
     <script src="scripts.js"></script>
 </body>
